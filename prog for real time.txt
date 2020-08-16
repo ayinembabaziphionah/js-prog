@@ -1,0 +1,22 @@
+function time() {
+  var date = new Date()
+  var hour = date.getHours() +1
+  var minutes = date.getMinutes()
+  var seconds = date.getSeconds()
+
+  if(seconds < 10){
+    var seconds = "0" + seconds
+  }
+  if(minutes < 10){
+    var minutes = "0" + minutes
+  }
+  if(hour < 10){
+    var hour= "0" + hour
+  }
+
+  var timing = hour + ":"+ minutes + ":" + seconds
+
+  console.log(timing)
+}
+
+setInterval(time, 1000)
